@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Fácil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .caja1 {
+            min-height: 100px;
+            background-color: #B783A8;
+        }
+
+        .caja2 {
+            height: 300px;
+            background-color: #A879B8;
+        }
+
+        .caja3 {
+            height: 300px;
+            background-color: #8872B8;
+        }
+
+        .caja4 {
+            height: 300px;
+            background-color: #7886BD;
+        }
+
+        .caja5 {
+            height: 300px;
+            background-color: #719CB8;
+        }
+
+        .caja6 {
+            height: 300px;
+            background-color: #C17DAB;
+        }
+
+        .caja7 {
+            height: 300px;
+            background-color: #A77BB8;
+        }
+
+        .caja8 {
+            height: 300px;
+            background-color: #927DBD;
+        }
+
+        .caja9 {
+            height: 300px;
+            background-color: #778CB8;
+        }
+
+        .caja10 {
+            height: 300px;
+            background-color: #76A5B8;
+        }
+
+        .icono {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <nav
+                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-start gap-4 p-3">
+
+                <div class="d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="IMG/imagen1.png" alt="Icono estructura">
+                    <a class="btn btn-outline-light" href="#" role="button">Estructura y Sintaxis</a>
+                </div>
+
+                <div class="d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="IMG/imagen2.png" alt="Icono especificidad">
+                    <a class="btn btn-outline-light" href="#" role="button">Niveles de Especificidad</a>
+                </div>
+
+                <div class="d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="IMG/imagen3.jpg" alt="Icono pseudo clases">
+                    <a class="btn btn-outline-light" href="#" role="button">Pseudo Clases y Pseudo Elementos</a>
+                </div>
+
+                <div class="d-flex flex-column align-items-center gap-2">
+                    <img class="icono" src="IMG/imagen4.png" alt="Icono box model">
+                    <a class="btn btn-outline-light" href="#" role="button">Box Model</a>
+                </div>
+
+            </nav>
+
+
+            <header class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja2 p-0 position-relative">
+                <img class="w-100 h-100 object-fit-cover" src="IMG/imagenPrincipal.jpeg" alt="Banner CSS Fácil">
+                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+
+                </div>
+            </header>
+
+
+            <aside class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja3 text-white p-3">
+                <h4>Importancia de CSS</h4>
+                <p>CSS permite mejorar la apariencia de los sitios web, agregando colores, estilos y diseños que hacen
+                    más agradable la navegación.</p>
+            </aside>
+
+
+            <section class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja4 p-0">
+                <img class="w-100 h-100 object-fit-cover" src="IMG/imagen6.jpg" alt="Código CSS">
+            </section>
+
+
+            <aside class="col-6 col-sm-6 col-md-10 col-lg-10 col-xl-4 col-xxl-4 caja5 p-3">
+                <h4>Colores y tipografía</h4>
+                <p>CSS permite personalizar los textos de una página cambiando su color, tamaño y tipo de letra:</p>
+                <pre class="bg-white p-2 rounded"><code>h2 {
+    color: red;
+    font-size: 25px;
+    font-family: Arial;
+}</code></pre>
+            </aside>
+
+
+            <section class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-8 col-xxl-8 caja6 p-3">
+                <h4>Fondos y bordes</h4>
+                <p>Con CSS podemos agregar fondos, cambiar colores y crear bordes para decorar los elementos de una
+                    página web.</p>
+                <pre class="bg-white p-2 rounded"><code>.contenedor {
+    background-color: lightblue;
+    border: 3px solid blue;
+    border-radius: 10px;
+    padding: 15px;
+}</code></pre>
+            </section>
+
+
+            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja7 p-3 ">
+                <img class="icono mb-2" src="IMG/imagen8.jpg" alt="Icono estructura">
+                <h5>Diseño flexible</h5>
+                <p>Permite organizar los elementos de una página utilizando herramientas como <code>display: flex</code>
+                    y <code>justify-content</code>.</p>
+            </section>
+
+            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja8 p-3">
+                <img class="icono mb-2" src="IMG/imagen7.jpg" alt="Icono especificidad">
+                <h5>Animaciones</h5>
+                <p>CSS permite crear movimientos y efectos visuales mediante propiedades como <code>transition</code> y
+                    <code>@keyframes</code>.
+                </p>
+            </section>
+
+            <section class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 caja9 p-3">
+                <img class="icono mb-2" src="IMG/imagen9.png" alt="Icono pseudo clases">
+                <h5>Diseño responsive</h5>
+                <p>Adapta el contenido de una página a celulares, tabletas y computadores utilizando <code>@media</code>
+                    y medidas flexibles.</p>
+            </section>
+
+            <footer class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8 caja10 p-3">
+                <h5>Mundo CSS</h5>
+                <p>Aprende a crear páginas web modernas y atractivas utilizando estilos, efectos y herramientas de
+                    diseño.</p>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
