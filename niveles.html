@@ -7,11 +7,11 @@
 
     <title>Niveles de Especificidad - CSS</title>
 
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Estilos personalizados -->
+
     <style>
         .caja1 {
             min-height: 100px;
@@ -19,47 +19,47 @@
         }
 
         .caja2 {
-            height: 300px;
             background-color: #9134B5;
         }
 
+
         .caja3 {
-            height: 300px;
+
             background-color: #351B80;
         }
 
         .caja4 {
-            height: 300px;
+            min-height: 300px;
             background-color: #5261B8;
         }
 
         .caja5 {
-            height: 300px;
+            min-height: 300px;
             background-color: #3479B5;
         }
 
         .caja6 {
-            height: 300px;
+            min-height: 320px;
             background-color: #C02C91;
         }
 
         .caja7 {
-            height: 300px;
+            min-height: 320px;
             background-color: #772B9E;
         }
 
         .caja8 {
-            height: 300px;
+            min-height: 320px;
             background-color: #7044C4;
         }
 
         .caja9 {
-            height: 300px;
+            min-height: 320px;
             background-color: #4655A0;
         }
 
         .caja10 {
-            height: 300px;
+            min-height: 320px;
             background-color: #286A99;
         }
 
@@ -70,6 +70,26 @@
             object-fit: cover;
             border: 2px solid #fff;
         }
+
+
+        .img-tarjeta {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .badge-peso {
+            background-color: rgba(0, 0, 0, 0.35);
+            font-family: monospace;
+            font-size: 0.9rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -77,9 +97,8 @@
     <div class="container-fluid">
         <div class="row">
 
-            <nav
-                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-start gap-4 p-3">
 
+            <nav class="col-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-start gap-4 p-3">
                 <div class="d-flex flex-column align-items-center gap-2">
                     <img class="icono" src="IMG/imagen1.png" alt="Icono estructura">
                     <a class="btn btn-outline-light" href="index.html" role="button">Estructura y Sintaxis</a>
@@ -87,35 +106,105 @@
 
                 <div class="d-flex flex-column align-items-center gap-2">
                     <img class="icono" src="IMG/imagen2.png" alt="Icono especificidad">
-                    <a class="btn btn-outline-light" href="niveles.html" role="button">Niveles de Especificidad</a>
+                    <a class="btn btn-outline-light active" href="niveles.html" role="button">Niveles de
+                        Especificidad</a>
                 </div>
 
                 <div class="d-flex flex-column align-items-center gap-2">
                     <img class="icono" src="IMG/imagen3.jpg" alt="Icono pseudo clases">
-
-                    <a class="btn btn-outline-light" href="pseudo.html" role="button">
-                        Pseudo Clases y Pseudo Elementos
-                    </a>
+                    <a class="btn btn-outline-light" href="pseudo.html" role="button">Pseudo Clases y Pseudo
+                        Elementos</a>
                 </div>
 
                 <div class="d-flex flex-column align-items-center gap-2">
                     <img class="icono" src="IMG/imagen4.png" alt="Icono box model">
                     <a class="btn btn-outline-light" href="boxmodel.html" role="button">Box Model</a>
                 </div>
-
             </nav>
 
-            <div class="col-12 caja2"></div>
+            <header class="col-12 p-0 caja2">
+                <img class="w-100 h-auto d-block" src="IMG/banner_niveles.png" alt="Banner niveles de especificidad">
+            </header>
+            <section class="col-12 col-md-4 caja3 p-4 text-white">
+                <h2 class="h4 border-bottom pb-2 mb-3">¿Qué es la especificidad?</h2>
+                <p class="small">
+                    Es uno de los conceptos clave de CSS. Es la manera en que los navegadores resuelven conflictos
+                    cuando diversas reglas se aplican a un mismo elemento, decidiendo qué estilos son más relevantes y,
+                    por lo tanto, cuáles serán aplicados.
+                </p>
+            </section>
 
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja3 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja4 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja5 p-4 text-white"></div>
+            <section class="col-12 col-md-4 caja4 p-4 text-white">
+                <h2 class="h4 border-bottom pb-2 mb-3">¿Cómo funciona?</h2>
+                <p class="small">
+                    Al cargar una web, el navegador combina HTML y CSS en etapas. A diferencia de otros lenguajes, CSS
+                    no arroja errores ni se interrumpe si detecta una línea que no entiende; simplemente la ignora.
+                </p>
+                <p class="small mb-0">
+                    La cascada lee de arriba hacia abajo, filtra y clasifica las reglas según su importancia.
+                </p>
+            </section>
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja8 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-white"></div>
+            <section class="col-12 col-md-4 caja5 p-4 text-white">
+                <h2 class="h4 border-bottom pb-2 mb-3">Coincidencias y Puntaje</h2>
+                <p class="small">
+                    Si hay conflicto entre reglas iguales, CSS toma el <strong>último valor escrito</strong>. Si el
+                    conflicto es por importancia, el navegador calcula un peso o puntaje.
+                </p>
+                <p class="small mb-0">
+                    Entre más específico sea un selector, mayor será su puntaje. <code>!important</code> tiene el peso
+                    máximo y el selector universal (<code>*</code>) el mínimo.
+                </p>
+            </section>
+
+
+            <article class="col-12 col-md-6 col-xl-3 caja6 p-3 text-white">
+                <h3 class="h5">1. !important y En Línea</h3>
+                <span class="badge-peso">1,0,0,0,0 / 0,1,0,0,0</span>
+                <ul class="small ps-3">
+                    <li><strong>!important:</strong> Reescribe cualquier estilo. Alta prioridad[cite: 1], usar con
+                        precaución[cite: 1].</li>
+                    <li class="mt-2"><strong>Estilos en línea:</strong> Aplicados directo en etiquetas; superan a clases
+                        e IDs[cite: 1].</li>
+                </ul>
+            </article>
+
+            <article class="col-12 col-md-6 col-xl-2 caja7 p-3 text-white">
+                <h3 class="h5">2. #ID</h3>
+                <span class="badge-peso">0, 0, 1, 0, 0</span>
+                <ul class="small ps-3">
+                    <li>Mayor peso que clases y etiquetas[cite: 1].</li>
+                    <li class="mt-2">Al ser únicos, es preferible usarlos para funcionalidad que para estilos[cite: 1].
+                    </li>
+                </ul>
+            </article>
+
+            <article class="col-12 col-md-4 col-xl-2 caja8 p-3 text-white">
+                <h3 class="h5">3. .Clases y más</h3>
+                <span class="badge-peso">0, 0, 0, 1, 0</span>
+                <p class="small mb-1">Incluye clases, atributos y pseudo-clases[cite: 1].</p>
+                <p class="small mb-0">Ideal para dar estilos con metodologías como <strong>BEM</strong> y mantener
+                    especificidad manejable[cite: 1].</p>
+            </article>
+
+            <article class="col-12 col-md-4 col-xl-2 caja9 p-3 text-white">
+                <h3 class="h5">4. Elementos</h3>
+                <span class="badge-peso">0, 0, 0, 0, 1</span>
+                <p class="small mb-0">
+                    Estilos aplicados a etiquetas (ej. <code>p</code>, <code>button</code>). Son los más básicos y
+                    fáciles de reescribir[cite: 1].
+                </p>
+            </article>
+
+            <article class="col-12 col-md-4 col-xl-3 caja10 p-3 text-white">
+                <h3 class="h5">5. Selector Universal (*)</h3>
+                <span class="badge-peso">0, 0, 0, 0, 0</span>
+                <p class="small mb-1">No tiene peso alguno y será reescrito por cualquier regla[cite: 1].</p>
+                <div class="bg-dark bg-opacity-25 p-2 rounded small">
+                    <strong>Ejemplo:</strong> La clase gana frente al elemento por especificidad, sin importar la
+                    cascada[cite: 1].
+                </div>
+            </article>
 
         </div>
     </div>
@@ -123,7 +212,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
-
 </body>
 
 </html>
