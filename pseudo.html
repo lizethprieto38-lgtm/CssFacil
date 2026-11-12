@@ -4,143 +4,328 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS Fácil</title>
+    <title>CSS Fácil | Pseudoclases</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <style>
-    .caja1 {
-        min-height: 100px;
-        background-color: #8E4778;
-    }
 
-    .caja2 {
-        height: 300px;
-        background-color: #9134B5;
-    }
+    <style>
+        /* ---------- Colores ---------- */
+        :root {
+            --color-menu: #8E4778;
+            --color-morado: #9134B5;
+            --color-indigo: #351B80;
+            --color-violeta-azulado: #5261B8;
+            --color-azul: #3479B5;
+            --color-magenta: #C02C91;
+            --color-ciruela: #772B9E;
+        }
 
-    .caja3 {
-        height: 300px;
-        background-color: #351B80;
-    }
+        .fondo-menu {
+            background-color: var(--color-menu);
+        }
 
-    .caja4 {
-        height: 300px;
-        background-color: #5261B8;
-    }
+        .fondo-morado {
+            background-color: var(--color-morado);
+        }
 
-    .caja5 {
-        height: 300px;
-        background-color: #3479B5;
-    }
+        .fondo-indigo {
+            background-color: var(--color-indigo);
+        }
 
-    .caja6 {
-        height: 300px;
-        background-color: #C02C91;
-    }
+        .fondo-violeta-azulado {
+            background-color: var(--color-violeta-azulado);
+        }
 
-    .caja7 {
-        height: 300px;
-        background-color: #772B9E;
-    }
+        .fondo-azul {
+            background-color: var(--color-azul);
+        }
 
-    .caja8 {
-        height: 300px;
-        background-color: #7044C4;
-    }
+        .fondo-magenta {
+            background-color: var(--color-magenta);
+        }
 
-    .caja9 {
-        height: 300px;
-        background-color: #4655A0;
-    }
+        .fondo-ciruela {
+            background-color: var(--color-ciruela);
+        }
 
-    .caja10 {
-        height: 300px;
-        background-color: #286A99;
-    }
+        /* ---------- Base ---------- */
+        body {
+            overflow-x: hidden;
+        }
 
-    .icono {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #fff;
-    }
-</style>
+        /* ---------- Menú ---------- */
+        .icono {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+
+        /* ---------- Banner ---------- */
+        .banner {
+            height: 300px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ---------- Introducción ---------- */
+        .introduccion-imagen {
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        pre.ejemplo {
+            background-color: rgba(0, 0, 0, .3);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 0;
+            color: #fff;
+            overflow-x: auto;
+        }
+
+        /* ---------- Tarjetas de pseudoclases ---------- */
+        .tarjeta {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 16px;
+            color: #fff;
+        }
+
+        .imagen-pseudoclase {
+            width: 100%;
+            height: 160px;
+            object-fit: contain;
+            /* la ilustración se ve completa, sin cortes */
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta h2 {
+            font-size: 1.25rem;
+            margin: 0 0 8px;
+            overflow-wrap: anywhere;
+            /* evita que :not(selector) se salga */
+        }
+
+        .tarjeta p {
+            font-size: .9rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row">
 
+        <!-- ================= MENÚ ================= -->
+        <nav class="row fondo-menu justify-content-center align-items-start gap-4 p-3">
 
-            <nav
-                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-start gap-4 p-3">
+            <div class="col-auto d-flex flex-column align-items-center gap-2">
+                <img class="icono" src="IMG/imagen1.png" alt="Icono de estructura">
+                <a class="btn btn-outline-light" href="index.html" role="button">Estructura y sintaxis</a>
+            </div>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <a class="btn btn-outline-light" href="#" role="button">Lorem</a>
-                </div>
+            <div class="col-auto d-flex flex-column align-items-center gap-2">
+                <img class="icono" src="IMG/imagen2.png" alt="Icono de especificidad">
+                <a class="btn btn-outline-light" href="niveles.html" role="button">Niveles de especificidad</a>
+            </div>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <a class="btn btn-outline-light" href="#" role="button">Lorem</a>
-                </div>
+            <div class="col-auto d-flex flex-column align-items-center gap-2">
+                <img class="icono" src="IMG/imagen3.jpg" alt="Icono de pseudoclases">
+                <a class="btn btn-outline-light" href="pseudo.html" role="button">Pseudoclases y pseudoelementos</a>
+            </div>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <a class="btn btn-outline-light" href="#" role="button">Lorem</a>
-                </div>
+            <div class="col-auto d-flex flex-column align-items-center gap-2">
+                <img class="icono" src="IMG/imagen4.png" alt="Icono de box model">
+                <a class="btn btn-outline-light" href="boxmodel.html" role="button">Box model</a>
+            </div>
 
-                <div class="d-flex flex-column align-items-center gap-2">
-                    <a class="btn btn-outline-light" href="#" role="button">Lorem</a>
-                </div>
+        </nav>
 
-            </nav>
+        <header class="row banner fondo-morado">
+            <div class="col-12 p-0">
+                <img src="IMG/SPEUDOCLASE.png" alt="Banner de pseudoclases">
+            </div>
+        </header>
 
-            <header class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja2 p-0 position-relative">
-                <img class="w-100 h-100 object-fit-cover" src="IMG/SPEUDOCLASE.png" alt="Banner pseuclases">
-                <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-
-                </div>
-            </header>
-
-
-            <aside class="col-12 col-md-12 col-lg-6 caja3 text-white p-3">
+        <section class="row">
+            <div class="col-12 col-lg-6 fondo-indigo text-white p-4">
                 <h1>¿Qué es una pseudoclase CSS?</h1>
-                <p>Las pseudoclases se utilizan para hacer referencia a elementos HTML que tengan un cierto
-                    comportamiento concreto. Volvamos a recordar el esquema general de sintaxis de CSS, donde ahora
-                    añadiremos las pseudoclases, que se definen añadiendo dos puntos antes del nombre de la pseudoclase
-                    concreta, de la siguiente forma:
-
+                <p>
+                    Las pseudoclases se utilizan para hacer referencia a elementos HTML que tienen un
+                    comportamiento concreto. Volvamos a recordar el esquema general de sintaxis de CSS, al que
+                    ahora añadiremos las pseudoclases. Se definen escribiendo dos puntos antes del nombre de la
+                    pseudoclase, de la siguiente forma:
                 </p>
-            </aside>
+            </div>
 
-            <aside class="col-12 col-md-12 col-lg-6 caja5 text-white p-3">
-          <img
-            class="w-100 h-100 object-fit-cover"
-            src="IMG/banner.jpeg"
-            alt="CÃ³digo CSS"
-          />
-        </aside>
+            <div class="col-12 col-lg-6 fondo-azul p-0">
+                <img class="introduccion-imagen" src="IMG/banner.jpeg" alt="Código CSS">
+            </div>
+        </section>
 
-        <div class="row g-0">
-          <div class="col-6 col-md-4 col-lg-2 caja2 p-3"><img class="imagen-pseudoclase" src="IMG/hover.png" alt="Ilustración de :hover" /><h2>:hover</h2><p>Selecciona un elemento cuando el usuario pasa el cursor sobre Ã©l.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja3 p-3"><img class="imagen-pseudoclase" src="IMG/active.png" alt="Ilustración de :active" /><h2>:active</h2><p>Selecciona un elemento mientras el usuario lo estÃ¡ activando, por ejemplo, al hacer clic en un enlace.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja4 p-3"><img class="imagen-pseudoclase" src="IMG/focus.png" alt="Ilustración de :focus" /><h2>:focus</h2><p>Selecciona el elemento que tiene el foco, como un campo de formulario seleccionado con el teclado.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja5 p-3"><img class="imagen-pseudoclase" src="IMG/visited.png" alt="Ilustración de :visited" /><h2>:visited</h2><p>Selecciona los enlaces que el usuario ya visitÃ³.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja6 p-3"><img class="imagen-pseudoclase" src="IMG/first-child.png" alt="Ilustración de :first-child" /><h2>:first-child</h2><p>Selecciona un elemento cuando es el primer hijo de su elemento padre.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja7 p-3"><img class="imagen-pseudoclase" src="IMG/last-child.png" alt="Ilustración de :last-child" /><h2>:last-child</h2><p>Selecciona un elemento cuando es el Ãºltimo hijo de su elemento padre.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja7 p-3"><img class="imagen-pseudoclase" src="IMG/nth-child.png" alt="Ilustración de :nth-child(n)" /><h2>:nth-child(n)</h2><p>Selecciona un elemento segÃºn su posiciÃ³n entre los hijos; permite usar nÃºmeros o patrones como even y odd.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja6 p-3"><img class="imagen-pseudoclase" src="IMG/first-of-type.png" alt="Ilustración de :first-of-type" /><h2>:first-of-type</h2><p>Selecciona el primer elemento de ese tipo entre sus hermanos.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja5 p-3"><img class="imagen-pseudoclase" src="IMG/last-of-type.png" alt="Ilustración de :last-of-type" /><h2>:last-of-type</h2><p>Selecciona el Ãºltimo elemento de ese tipo entre sus hermanos.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja4 p-3"><img class="imagen-pseudoclase" src="IMG/not-selector.png" alt="Ilustración de :not(selector)" /><h2>:not(selector)</h2><p>Selecciona los elementos que no coinciden con el selector indicado.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja3 p-3"><img class="imagen-pseudoclase" src="IMG/cheked.png" alt="Ilustración de :checked" /><h2>:checked</h2><p>Selecciona casillas de verificaciÃ³n u opciones que estÃ¡n marcadas.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja2 p-3"><img class="imagen-pseudoclase" src="IMG/disable.png" alt="Ilustración de :disabled" /><h2>:disabled</h2><p>Selecciona los controles de formulario que estÃ¡n deshabilitados.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja2 p-3"><img class="imagen-pseudoclase" src="IMG/enable.png" alt="Ilustración de :enabled" /><h2>:enabled</h2><p>Selecciona los controles de formulario que estÃ¡n habilitados.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja3 p-3"><img class="imagen-pseudoclase" src="IMG/required.png" alt="Ilustración de :required" /><h2>:required</h2><p>Selecciona los campos de formulario que deben completarse antes de enviar.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja4 p-3"><img class="imagen-pseudoclase" src="IMG/valid .png" alt="Ilustración de :valid" /><h2>:valid</h2><p>Selecciona un campo cuyo valor cumple las reglas de validaciÃ³n.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja5 p-3"><img class="imagen-pseudoclase" src="IMG/invalid.png" alt="Ilustración de :invalid" /><h2>:invalid</h2><p>Selecciona un campo cuyo valor no cumple las reglas de validaciÃ³n.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja6 p-3"><img class="imagen-pseudoclase" src="IMG/empty .png" alt="Ilustración de :empty" /><h2>:empty</h2><p>Selecciona un elemento que no tiene hijos ni contenido de texto.</p></div>
-          <div class="col-6 col-md-4 col-lg-2 caja7 p-3"><img class="imagen-pseudoclase" src="IMG/root.png" alt="Ilustración de :root" /><h2>:root</h2><p>Selecciona el elemento raÃ­z del documento; en HTML, normalmente es &lt;html&gt;.</p></div>
-        </div>
-      </div>
+        <main class="row g-0">
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-morado">
+                    <img class="imagen-pseudoclase" src="IMG/hover.png" alt="Ilustración de :hover">
+                    <h2>:hover</h2>
+                    <p>Selecciona un elemento cuando el usuario pasa el cursor sobre él.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-indigo">
+                    <img class="imagen-pseudoclase" src="IMG/active.png" alt="Ilustración de :active">
+                    <h2>:active</h2>
+                    <p>Selecciona un elemento mientras el usuario lo está activando, por ejemplo, al hacer clic en un
+                        enlace.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-violeta-azulado">
+                    <img class="imagen-pseudoclase" src="IMG/focus.png" alt="Ilustración de :focus">
+                    <h2>:focus</h2>
+                    <p>Selecciona el elemento que tiene el foco, como un campo de formulario seleccionado con el
+                        teclado.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-azul">
+                    <img class="imagen-pseudoclase" src="IMG/visited.png" alt="Ilustración de :visited">
+                    <h2>:visited</h2>
+                    <p>Selecciona los enlaces que el usuario ya visitó.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-magenta">
+                    <img class="imagen-pseudoclase" src="IMG/first-child.png" alt="Ilustración de :first-child">
+                    <h2>:first-child</h2>
+                    <p>Selecciona un elemento cuando es el primer hijo de su elemento padre.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-ciruela">
+                    <img class="imagen-pseudoclase" src="IMG/last-child.png" alt="Ilustración de :last-child">
+                    <h2>:last-child</h2>
+                    <p>Selecciona un elemento cuando es el último hijo de su elemento padre.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-ciruela">
+                    <img class="imagen-pseudoclase" src="IMG/nth-child.png" alt="Ilustración de :nth-child(n)">
+                    <h2>:nth-child(n)</h2>
+                    <p>Selecciona un elemento según su posición entre los hijos; permite usar números o patrones como
+                        even y odd.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-magenta">
+                    <img class="imagen-pseudoclase" src="IMG/first-of-type.png" alt="Ilustración de :first-of-type">
+                    <h2>:first-of-type</h2>
+                    <p>Selecciona el primer elemento de ese tipo entre sus hermanos.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-azul">
+                    <img class="imagen-pseudoclase" src="IMG/last-of-type.png" alt="Ilustración de :last-of-type">
+                    <h2>:last-of-type</h2>
+                    <p>Selecciona el último elemento de ese tipo entre sus hermanos.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-violeta-azulado">
+                    <img class="imagen-pseudoclase" src="IMG/not-selector.png" alt="Ilustración de :not(selector)">
+                    <h2>:not(selector)</h2>
+                    <p>Selecciona los elementos que no coinciden con el selector indicado.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-indigo">
+                    <img class="imagen-pseudoclase" src="IMG/cheked.png" alt="Ilustración de :checked">
+                    <h2>:checked</h2>
+                    <p>Selecciona casillas de verificación u opciones que están marcadas.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-morado">
+                    <img class="imagen-pseudoclase" src="IMG/disable.png" alt="Ilustración de :disabled">
+                    <h2>:disabled</h2>
+                    <p>Selecciona los controles de formulario que están deshabilitados.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-morado">
+                    <img class="imagen-pseudoclase" src="IMG/enable.png" alt="Ilustración de :enabled">
+                    <h2>:enabled</h2>
+                    <p>Selecciona los controles de formulario que están habilitados.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-indigo">
+                    <img class="imagen-pseudoclase" src="IMG/required.png" alt="Ilustración de :required">
+                    <h2>:required</h2>
+                    <p>Selecciona los campos de formulario que deben completarse antes de enviar.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-violeta-azulado">
+                    <img class="imagen-pseudoclase" src="IMG/valid .png" alt="Ilustración de :valid">
+                    <h2>:valid</h2>
+                    <p>Selecciona un campo cuyo valor cumple las reglas de validación.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-azul">
+                    <img class="imagen-pseudoclase" src="IMG/invalid.png" alt="Ilustración de :invalid">
+                    <h2>:invalid</h2>
+                    <p>Selecciona un campo cuyo valor no cumple las reglas de validación.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-magenta">
+                    <img class="imagen-pseudoclase" src="IMG/empty .png" alt="Ilustración de :empty">
+                    <h2>:empty</h2>
+                    <p>Selecciona un elemento que no tiene hijos ni contenido de texto.</p>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-4 col-xl-2">
+                <div class="tarjeta fondo-ciruela">
+                    <img class="imagen-pseudoclase" src="IMG/root.png" alt="Ilustración de :root">
+                    <h2>:root</h2>
+                    <p>Selecciona el elemento raíz del documento; en HTML, normalmente es &lt;html&gt;.</p>
+                </div>
+            </article>
+
+        </main>
     </div>
-  </body>
+</body>
+
 </html>
