@@ -4,63 +4,57 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Box Model - CSS</title>
-
-    <!-- Bootstrap CSS -->
+    <title>CSS Fácil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <!-- Estilos personalizados -->
     <style>
         .caja1 {
             min-height: 100px;
-            background-color: #8E4778;
+            background-color: #B783A8;
         }
 
         .caja2 {
-            height: 300px;
             background-color: #A879B8;
         }
 
         .caja3 {
             height: 300px;
-            background-color: #351B80;
+            background-color: #8872B8;
         }
 
         .caja4 {
             height: 300px;
-            background-color: #5261B8;
+            background-color: #7886BD;
         }
 
         .caja5 {
             height: 300px;
-            background-color: #3479B5;
+            background-color: #719CB8;
         }
 
         .caja6 {
             height: 300px;
-            background-color: #C02C91;
+            background-color: #C17DAB;
         }
 
         .caja7 {
             height: 300px;
-            background-color: #772B9E;
+            background-color: #A77BB8;
         }
 
         .caja8 {
             height: 300px;
-            background-color: #7044C4;
+            background-color: #927DBD;
         }
 
         .caja9 {
             height: 300px;
-            background-color: #4655A0;
+            background-color: #778CB8;
         }
 
         .caja10 {
             height: 300px;
-            background-color: #286A99;
+            background-color: #76A5B8;
         }
 
         .icono {
@@ -76,6 +70,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+
 
             <nav
                 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 caja1 d-flex flex-wrap flex-row justify-content-center align-items-start gap-4 p-3">
@@ -105,28 +100,319 @@
 
             </nav>
 
-
-            <header class="col-12 p-0 caja2">
-                <img class="img-fluid w-100 d-block" src="IMG/box.png" alt="Banner box model">
+            <header class="col-12 banner-header">
+                <img src="IMG/boxmodel-banner.png" class="img-fluid w-100" alt="Banner Box Model">
             </header>
 
+            <!-- DOS CAJAS PRINCIPALES -->
+            <aside class="col-12 col-md-12 col-lg-6 caja3">
+                <h1>¿Qué es el Box Model?</h1>
+                <p>El Box Model o modelo de caja es un concepto fundamental de CSS que explica cómo se organizan
+                    y
+                    dimensionan los elementos dentro de una página web.
+                    En CSS, cada elemento HTML se representa como una caja compuesta por cuatro partes:
+                    contenido,
+                    relleno, borde y margen.
+                    Comprender este modelo permite controlar el tamaño de los elementos, sus espacios internos y
+                    externos, y la distribución de los componentes de una página web.</p>
+            </aside>
 
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja3 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja4 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja5 p-4 text-white"></div>
+            <aside class="col-12 col-md-12 col-lg-6 caja5">
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja8 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-white"></div>
 
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+                <div class="col-12">
+                    <div class="box-model-container">
+                        <svg viewBox="0 0 440 360" class="box-model-svg" xmlns="http://www.w3.org/2000/svg">
+
+                            <!-- Líneas exteriores de Margin -->
+                            <path d="M220 15 L425 130 L425 245 L220 350 L15 245 L15 130 Z" fill="none" stroke="#555"
+                                stroke-dasharray="4 4" />
+
+                            <!-- Cara superior izquierda -->
+                            <polygon points="220,35 220,105 125,160 35,110" fill="#ffbd45" stroke="#222" />
+
+                            <!-- Cara superior derecha -->
+                            <polygon points="220,35 405,140 315,195 220,105" fill="#d8d8d8" stroke="#222" />
+
+                            <!-- Cara superior frontal izquierda -->
+                            <polygon points="35,110 125,160 220,215 220,255 35,150" fill="#ffad32" stroke="#222" />
+
+                            <!-- Cara superior frontal derecha -->
+                            <polygon points="220,105 315,195 405,140 405,180 220,285" fill="#79bce0" stroke="#222" />
+
+                            <!-- Cara lateral izquierda -->
+                            <polygon points="35,150 220,255 220,320 35,215" fill="#ed7d25" stroke="#222" />
+
+                            <!-- Cara lateral derecha -->
+                            <polygon points="220,255 405,180 405,245 220,320" fill="#2585b8" stroke="#222" />
+
+                            <!-- Centro -->
+                            <polygon points="125,160 220,105 315,195 220,255" fill="#ffffff" stroke="#222" />
+
+                            <!-- Líneas internas -->
+                            <path d="M220 35 L220 105 M220 255 L220 320" stroke="#333" stroke-dasharray="5 4"
+                                fill="none" />
+
+                            <!-- Textos -->
+                            <g font-family="Arial" font-size="13" font-weight="bold" fill="#111" text-anchor="middle">
+
+                                <text x="145" y="105" transform="rotate(-27 145 105)">Content</text>
+                                <text x="330" y="105" transform="rotate(28 330 105)">Content</text>
+                                <text x="150" y="205" transform="rotate(27 150 205)">Content</text>
+                                <text x="300" y="230" transform="rotate(-27 300 230)">Border</text>
+
+                                <text x="110" y="245" transform="rotate(27 110 245)">Padding</text>
+                                <text x="310" y="285" transform="rotate(-27 310 285)">Margin</text>
+
+                                <text x="110" y="70" transform="rotate(-27 110 70)"> </text>
+                                <text x="85" y="300" transform="rotate(27 85 300)">Margin</text>
+                            </g>
+
+                            <g font-family="Arial" font-size="12" font-weight="bold" fill="#111" text-anchor="middle">
+                                <text x="265" y="160">Content</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+
+            </aside>
+
+            <!-- 18 CAJAS INFERIORES -->
+            <div class="row g-0">
+
+
+                <div class="col-6 col-md-6 col-lg-3 caja2 ">
+                    <h1>Content (Contenido)</h1>
+                    <p>
+                        Es el área central de la caja donde se muestra la información,
+                        como textos, imágenes, videos u otros elementos.
+                        Se controla principalmente mediante las propiedades width y height.
+                    </p>
+
+                    <pre class="bg-white p-2 rounded codigo"><code>.caja {
+        width: 200px;
+        height: 100px;
+    }</code></pre>
+                </div>
+
+
+                <div class="col-6 col-md-6 col-lg-3 caja3">
+                    <h1>Padding (Relleno)</h1>
+                    <p>
+                        Es el espacio interno que existe entre el contenido y el borde.
+                        Permite separar la información de los límites de la caja.
+                    </p>
+
+                    <pre class="bg-white p-2 rounded codigo"><code>.caja {
+        padding: 20px;
+    }</code></pre>
+                </div>
+
+
+                <div class="col-6 col-md-6 col-lg-3 caja4">
+                    <h1>Border (Borde)</h1>
+                    <p>
+                        Es la línea que rodea el contenido y el padding.
+                        Se puede personalizar cambiando su grosor, estilo y color.
+                    </p>
+
+                    <pre class="bg-white p-2 rounded codigo"><code>.caja {
+        border: 2px solid purple;
+    }</code></pre>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3 caja5">
+                    <h1>Margin (Margen)</h1>
+                    <p>
+                        Es el espacio exterior que separa una caja de otros elementos
+                        de la página.
+                    </p>
+
+                    <pre class="bg-white p-2 rounded codigo"><code>.caja {
+        margin: 15px;
+    }</code></pre>
+                </div>
+
+
+                <div class="row g-3">
+
+                    <!-- CAJA 1: FUNCIONAMIENTO -->
+                    <div class="col-12 col-md-6 col-lg-4 caja7">
+                        <h1>¿Cómo funciona el Box Model?</h1>
+                        <p>Cada una de las cuatro partes cumple una función específica en la distribución del
+                            espacio.
+                        </p>
+
+                        <p><strong>Content:</strong> Contiene la información.</p>
+                        <p><strong>Padding:</strong> Separa el contenido del borde.</p>
+                        <p><strong>Border:</strong> Rodea el contenido y el relleno.</p>
+                        <p><strong>Margin:</strong> Separa la caja de otros elementos.</p>
+                    </div>
+
+                    <!-- CAJA 2: EJEMPLO -->
+                    <div class="col-12 col-md-6 col-lg-4 caja6">
+                        <h1>Ejemplo del Box Model</h1>
+                        <p>En este ejemplo se aplican las cuatro propiedades principales del modelo de caja.</p>
+
+                        <pre class="bg-white p-2 rounded codigo"><code>.caja {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid purple;
+    margin: 10px;
+}</code></pre>
+
+                        <p>El ancho total es de <strong>250 px</strong>, sin contar el margen exterior.</p>
+                    </div>
+
+                    <!-- CAJA 3: BOX SIZING -->
+                    <div class="col-12 col-md-6 col-lg-4 caja5">
+                        <h1>Box-sizing</h1>
+                        <p>Esta propiedad permite controlar cómo se calcula el tamaño total de una caja.</p>
+                        <p>Tiene dos valores principales:</p>
+                        <ul>
+                            <li><strong>Content-box:</strong> Valor predeterminado.</li>
+                            <li><strong>Border-box:</strong> Incluye contenido, padding y borde.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CAJA 4: CONTENT BOX -->
+                    <div class="col-12 col-md-6 col-lg-4 caja4">
+                        <h1>Content-box</h1>
+                        <p>El ancho y alto establecidos corresponden únicamente al contenido. El padding y el
+                            borde se
+                            suman al tamaño total.</p>
+
+                        <pre class="bg-white p-2 rounded codigo"><code>.caja {
+    box-sizing: content-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid purple;
+}</code></pre>
+
+                        <p><strong>Ancho total:</strong> 200 + 40 + 10 = 250 px.</p>
+                    </div>
+
+                    <!-- CAJA 5: BORDER BOX -->
+                    <div class="col-12 col-md-6 col-lg-4 caja3">
+                        <h1>Border-box</h1>
+                        <p>Incluye el contenido, el padding y el borde dentro del ancho y alto definidos.</p>
+
+                        <pre class="bg-white p-2 rounded codigo"><code>.caja {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid purple;
+}</code></pre>
+
+                        <p><strong>Ancho total:</strong> 200 px.</p>
+                    </div>
+
+                    <!-- CAJA 6: RECOMENDACIÓN -->
+                    <div class="col-12 col-md-6 col-lg-4 caja2">
+                        <h1>Recomendación</h1>
+                        <p>Es recomendable utilizar <strong>border-box</strong> porque facilita el control de
+                            las
+                            dimensiones y permite crear diseños más responsivos.</p>
+
+                        <pre class="bg-white p-2 rounded codigo"><code>* {
+    box-sizing: border-box;
+}</code></pre>
+                    </div>
+
+                    <!-- CAJA 7: EJEMPLO PRÁCTICO -->
+                    <div class="col-12 col-md-6 col-lg-4 caja7">
+                        <h1>Ejemplo práctico</h1>
+                        <p>Podemos crear una caja aplicando las cuatro propiedades principales para observar
+                            cómo se
+                            comporta.</p>
+
+                        <pre class="bg-white p-2 rounded codigo"><code>.caja {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 3px solid #8B3A83;
+    margin: 15px;
+    background-color: #F5B6DA;
+}</code></pre>
+
+                        <p>Las cuatro propiedades trabajan juntas para definir el espacio del elemento.</p>
+                    </div>
+
+                    <!-- CAJA 8: OVERFLOW -->
+                    <div class="col-12 col-md-6 col-lg-4 caja6">
+                        <h1>Propiedad Overflow</h1>
+                        <p>Permite controlar qué sucede cuando el contenido supera el espacio disponible de una
+                            caja.
+                        </p>
+
+                        <ul>
+                            <li><strong>Visible:</strong> Permite que el contenido sobresalga.</li>
+                            <li><strong>Hidden:</strong> Oculta el contenido desbordado.</li>
+                            <li><strong>Scroll:</strong> Muestra barras de desplazamiento.</li>
+                            <li><strong>Auto:</strong> Agrega desplazamiento cuando es necesario.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CAJA 9: EJEMPLO OVERFLOW -->
+                    <div class="col-12 col-md-6 col-lg-4 caja5">
+                        <h1>Ejemplo de Overflow</h1>
+                        <p>Con el valor auto se muestran barras de desplazamiento cuando el contenido supera las
+                            dimensiones de la caja.</p>
+
+                        <pre class="bg-white p-2 rounded codigo"><code>.caja {
+    width: 200px;
+    height: 150px;
+    overflow: auto;
+}</code></pre>
+                    </div>
+
+                    <!-- CAJA 10: BUENAS PRÁCTICAS -->
+                    <div class="col-12 col-md-6 col-lg-4 caja4">
+                        <h1>Buenas prácticas</h1>
+                        <p>Para trabajar correctamente con el Box Model es importante:</p>
+
+                        <ul>
+                            <li>Utilizar box-sizing: border-box.</li>
+                            <li>Organizar márgenes y rellenos.</li>
+                            <li>Usar unidades relativas como %, rem y em.</li>
+                            <li>Evitar alturas fijas cuando el contenido cambia.</li>
+                            <li>Utilizar gap con Flexbox o Grid.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CAJA 11: PROBLEMAS COMUNES -->
+                    <div class="col-12 col-md-6 col-lg-4 caja3">
+                        <h1>Problemas comunes</h1>
+                        <p><strong>Elementos más grandes de lo esperado:</strong> Utilizar box-sizing:
+                            border-box.</p>
+
+                        <p><strong>Contenido que sobresale:</strong> Aplicar overflow: auto.</p>
+
+                        <p><strong>Elementos muy separados:</strong> Revisar los valores de margin.</p>
+
+                        <p><strong>Contenido pegado al borde:</strong> Aumentar el padding.</p>
+
+                        <p><strong>Márgenes que se combinan:</strong> Utilizar Flexbox y gap.</p>
+                    </div>
+
+                    <!-- CAJA 12: HERRAMIENTAS -->
+                    <div class="col-12 col-md-6 col-lg-4 caja2">
+                        <h1>Herramientas de inspección</h1>
+                        <p>Los navegadores cuentan con herramientas de desarrollo que permiten observar cómo se
+                            distribuyen las dimensiones de cada elemento.</p>
+
+                        <p><strong>Chrome DevTools:</strong> Permite inspeccionar elementos HTML, consultar sus
+                            dimensiones y modificar propiedades CSS en tiempo real.</p>
+
+                        <p><strong>Inspector de elementos:</strong> Ayuda a identificar el content, padding,
+                            border y
+                            margin de cada elemento.</p>
+                    </div>
+
+                </div>
 
 </body>
 
